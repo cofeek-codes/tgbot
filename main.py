@@ -8,7 +8,9 @@ url = 'https://profile-psi-three.vercel.app/'
 
 def main():
     global token, url
-    parse(url)
+    titles, skills = parse(url)
+    for i, title in enumerate(titles):
+        print(title, skills[i])
 
 
 if __name__ == "__main__":
