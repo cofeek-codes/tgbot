@@ -10,6 +10,6 @@ def parse(url):
         tree = lxml.html.document_fromstring(res.text)
         titles = tree.xpath("//*[@class='project__name']/text()")
         skills = tree.xpath("//*[@class='circle__title']/text()")
-        return titles, skills
+        return titles
     else:
         print(f'connection error: {res.status_code}')

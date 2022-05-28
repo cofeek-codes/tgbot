@@ -13,6 +13,8 @@ url = 'https://profile-psi-three.vercel.app/'
 @bot.message_handler(commands=['projects'])
 def get_projects(message):
     global url
+    titles = parse(url)
+    bot.send_message(message.chat.id, titles)
 
 
 # greet
